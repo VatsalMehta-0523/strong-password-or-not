@@ -5,7 +5,7 @@ int main(){
     int up = 0 , low = 0 , space = 0 , sp = 0 ,dig = 0 ;
     printf("A strong password includes combinations of : \nupper case , lower case , special charcters and digits.\n");
     printf("\nenter your password : ");
-    gets(str);
+    gets(str);                                         // alternate of scanf function used to take srting inputs
 
     for (int i = 0 ; str[i] ; i++){
         if(str[i] >= 'a' && str[i] <= 'z' ){
