@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(){
     char str[100];
@@ -7,6 +8,12 @@ int main(){
     printf("\nenter your password : ");
     gets(str);                                         // alternate of scanf function used to take srting inputs
 
+    int n = strlen(str);
+    if ( n  < 6 ){
+        printf("\nsize of your password is less than 6 characters please try again...");
+        return 0 ;
+    }
+    
     for (int i = 0 ; str[i] ; i++){
         if(str[i] >= 'a' && str[i] <= 'z' ){
             low++;
@@ -24,7 +31,6 @@ int main(){
             sp++;
         }
     }
-
 
     if( low == 0 ){
         printf("lower character missing\nPLEASE TRY AGAIN ");
